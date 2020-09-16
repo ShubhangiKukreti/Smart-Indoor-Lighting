@@ -3,7 +3,7 @@ An android application to detect the intensity of light in a room using a smartp
 
 **ANDROID APPLICATION**
 
-The application uses a smartphone's ambient light sensor to detect and measure illuminance in a room. Two smartphones were used to incraese the accuracy of the readings. The readings are sent and stored in Google Firebase. The average of the two readings is taken as the final value. A weather API is called used the **volley library** to get the sunset time of the day.
+The application uses a smartphone's ambient light sensor to detect and measure illuminance in a room. Two smartphones were used to incraese the accuracy of the readings. The readings are sent and stored in Google Firebase. The average of the two readings is taken as the final value. A weather API[1] is called used the **volley library** to get the sunset time of the day.
 
 Based on the current time and the sunset time, following situations are actuated:
 1. If it is current time is less than sunset time and the light inside the room is less than 300 lux, the brightness is increased.
@@ -12,9 +12,13 @@ Based on the current time and the sunset time, following situations are actuated
 
 **MACHINE LEARNING MODEL**
 
-A ML model is trained using **Logistic Regression** algorithm using open-source data to predict the occupancy of the room. The model is then tested on the light intensity values collected from the smartphones. 
+A ML model is trained using **Logistic Regression** algorithm using open-source data[2] to predict the occupancy of the room. The model is then tested on the light intensity values collected from the smartphones. 
 
 
 **TO-DO**
 
 Use the output of the ML model(room occupnacy prediction) to automate the switching on/off of lights action.
+
+
+[1] https://sunrise-sunset.org/api
+[2] https://archive.ics.uci.edu/ml/datasets/Occupancy+Detection
